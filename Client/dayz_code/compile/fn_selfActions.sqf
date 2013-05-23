@@ -170,13 +170,13 @@ if (_canPickLight and !dayz_hasLight) then {
 	//Allow changing of clothes
 	if(_vehicle == player and (_hasClothes1 or _hasClothes2 or _hasClothes3)) then {
 		if((s_doClothes1 < 0) and (_hasClothes1)) then {
-			s_doClothes1 = player addAction [format["<t color='#FF0000'>Wear Ghillie Suit</t>"], "z\addons\dayz_code\actions\player_wearClothes.sqf", "Skin_Sniper1_DZ"];
+			s_doClothes1 = player addAction [format["<t color='#FF0000'>Wear Ghillie Suit</t>"], "z\addons\dayz_code\actions\player_wearClothes.sqf", ["Skin_Sniper1_DZ"]];
 		};
 		if((s_doClothes2 < 0) and (_hasClothes2)) then {
-			s_doClothes2 = player addAction [format["<t color='#FF0000'>Wear Camo Clothing</t>"], "z\addons\dayz_code\actions\player_wearClothes.sqf", "Skin_Camo1_DZ"];
+			s_doClothes2 = player addAction [format["<t color='#FF0000'>Wear Camo Clothing</t>"], "z\addons\dayz_code\actions\player_wearClothes.sqf", ["Skin_Camo1_DZ"]];
 		};
 		if((s_doClothes3 < 0) and (_hasClothes3)) then {
-			s_doClothes3 = player addAction [format["<t color='#FF0000'>Wear Survival Clothing</t>"], "z\addons\dayz_code\actions\player_wearClothes.sqf", "Skin_Survivor1_DZ"];
+			s_doClothes3 = player addAction [format["<t color='#FF0000'>Wear Survival Clothing</t>"], "z\addons\dayz_code\actions\player_wearClothes.sqf", ["Skin_Survivor1_DZ"]];
 		};
 	} else	{
 		player removeAction s_doClothes1;
