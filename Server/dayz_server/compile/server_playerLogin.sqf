@@ -79,9 +79,16 @@ if (!_isNew) then {
 	_survival =		_primary select 6;
 	_model =		_primary select 7;
 	_hiveVer =		_primary select 8;
+	_humanity = _playerObj getVariable ["humanity",0];
+_isBandit = _humanity < -2000;
+_isHero = _humanity > 5000;
 	
-	if (!(_model in ["SurvivorW2_DZ","Survivor2_DZ","Sniper1_DZ","Soldier1_DZ","Camo1_DZ","BanditW1_DZ","Bandit1_DZ","SurvivorW2_DZ"])) then {
-		_model = "Survivor2_DZ";
+	_model = "Survivor2_DZ";
+	if(_isBandit) then {
+	_model = "Bandit1_DZ";
+	};
+	if(_isHero) then {
+	_model = "Survivor3_DZ";
 	};
 	
 } else {
